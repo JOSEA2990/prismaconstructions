@@ -10,18 +10,24 @@
 </head>
 <body>
     <!-- Header -->
-  <header>
-    <h1>Prisma Constructions</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Prisma Constructions</h1>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <nav>
+    <ul id="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+    function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");}
+</script>
 
   <!-- Hero -->
   <section class="hero" id="inicio">
@@ -35,8 +41,29 @@
   <section id="nosotros">
     <h2>Nosotros</h2>
     <p style="text-align: center; max-width: 800px; margin: auto;">
-      En <strong>Prisma Constructions</strong> nos especializamos en la ejecución de proyectos de construcción con altos estándares de calidad, innovación y compromiso con nuestros clientes.
+      En <strong>Prisma Constructions</strong> Somos un equipo interdisciplinario con capacidad y experiencia para desarrollo de proyectos de alta y baja complejidad, con mas de dos decadas de experiencia garantizamos cosntrucciones de excelente calidad impulsadas con visión e innovación.
     </p>
+
+    <div class="espaciado"></div>
+
+    <h2>Fundadores</h2>
+    <div class="services2">
+      <div class="service2">
+        <image src="FOTOS/Fundador1.jpg"></image>
+      </div>
+      <div class="service2">
+        <image src="FOTOS/Fundador2.jpg"></image>
+      </div>
+    </div>
+
+    <div class="espaciado"></div>
+
+    <div class="services2">
+      <div class="service2">
+        <image src="FOTOS/Taller.jpg"></image>
+      </div>
+    </div>
+
   </section>
 
   <!-- Servicios -->
@@ -44,16 +71,16 @@
     <h2>Servicios</h2>
     <div class="services">
       <div class="service">
-        <h3>Obras Civiles</h3>
-        <p>Construcción de infraestructuras con los más altos estándares de calidad.</p>
+        <h3>Diseño</h3>
+        <p>Diseño Arquitectónico, coordinación de Planos, revisión y firma de Planos</p>
       </div>
       <div class="service">
-        <h3>Remodelaciones</h3>
-        <p>Transformamos espacios para adaptarlos a tus necesidades.</p>
+        <h3>Construcción</h3>
+        <p>Construcciónes nuevas y remodelaciones.</p>
       </div>
       <div class="service">
         <h3>Consultoría</h3>
-        <p>Asesoría profesional para el desarrollo de proyectos constructivos.</p>
+        <p>Planificación, Asesoria Administrativa y técnica, tramite de permisos e inspección.</p>
       </div>
     </div>
   </section>

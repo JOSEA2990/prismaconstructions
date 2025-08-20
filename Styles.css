@@ -11,6 +11,45 @@
       color: #333;
     }
 
+    /* === Estilos del menú responsive === */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Ocultar menú en móvil por defecto */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #4e7ea3;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
     /* === Header === */
     header {
       background: #0a2a43;
@@ -29,12 +68,6 @@
       font-weight: 700;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
     nav a {
       text-decoration: none;
       color: #fff;
@@ -49,7 +82,7 @@
     /* === Hero === */
     .hero {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center/cover;
+      background: url(FOTOS/FotoPortada.png) no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -87,6 +120,19 @@
       margin: auto;
     }
 
+    .espaciado{
+       padding:1rem
+    }
+
+    img{
+    margin:0;
+    box-shadow: 0px 0px 80px rgb(201, 199, 199);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+
     section h2 {
       text-align: center;
       margin-bottom: 2rem;
@@ -101,9 +147,23 @@
       gap: 2rem;
     }
 
+    .services2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
     .service {
       background: #f4f4f4;
       padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service2 {
+      background: #f4f4f4;
+      padding: 1rem;
       border-radius: 10px;
       text-align: center;
       transition: transform 0.3s;
