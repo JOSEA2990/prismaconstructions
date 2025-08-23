@@ -6,13 +6,19 @@
     <title>Prisma Constructions</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="Styles.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
     <!-- Header -->
 <header>
   <h1>Prisma Constructions</h1>
+  <a href="#inicio" class="logo">
+    <img src="FOTOS/Logo-Prisma-Constructions.png" alt="Prisma Constructions" />
+  </a>
+
   <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  
   <nav>
     <ul id="menu">
       <li><a href="#inicio">Inicio</a></li>
@@ -22,6 +28,7 @@
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
+
 </header>
 
 <script>
@@ -33,7 +40,7 @@
   <section class="hero" id="inicio">
     <div>
       <h2>Construimos el futuro con calidad y confianza</h2>
-      <button onclick="window.open('https://wa.me/34659551320?text=Hola,%20quiero%20una%20cotización%20con%20Prisma%20Constructions', '_blank')">
+      <button onclick="window.open('https://wa.me/50766178673?text=Hola,%20quiero%20una%20cotización%20con%20Prisma%20Constructions', '_blank')">
       Solicitar Cotización por WhatsApp
       </button>
     </div>
@@ -87,11 +94,67 @@
     </div>
   </section>
 
+
   <!-- Proyectos -->
   <section id="proyectos">
-    <h2>Proyectos</h2>
-    <p style="text-align:center;">Próximamente añadiremos nuestro portafolio de proyectos destacados.</p>
-  </section>
+  <h2>Proyectos</h2>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="FOTOS/proyecto1.jpg" alt="Proyecto 1">
+        <p>Edificios Residenciales - Garden Apartments</p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="FOTOS/proyecto2.jpg" alt="Proyecto 2">
+        <p>Edifcio Residencial - Manhattan Sky</p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="FOTOS/proyecto3.jpg" alt="Proyecto 3">
+        <p>Diseño - Casa Campestre</p>
+      </div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+
+
 
   <!-- Contacto -->
   <section id="contacto">
@@ -110,13 +173,14 @@
   <footer>
     <p>&copy; 2025 Prisma Constructions. Todos los derechos reservados.</p>
     <p>Email: construccionesprismapty@gmail.com | Tel: +507 6617-8673</p>
+    <img src="/FOTOS/Logo-Prisma-Constructions.png" alt="Prisma Constructions" class="footer-logo">
   </footer>
 
   <!-- Scripts -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-      emailjs.init("Prisma"); // ← pon aquí tu USER ID de EmailJS
+      emailjs.init("1Rymt9lh5C3_cDoxB"); // ← pon aquí tu USER ID de EmailJS
     })();
 
     function toggleMenu() {
